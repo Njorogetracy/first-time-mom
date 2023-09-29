@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')  # noqa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['first-time-mom.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com', 'localhost']
 
 
 # Application definition
