@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')  # noqa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['first-time-mom.heroku.com', 'localhost']  # noqa
+ALLOWED_HOSTS = ['first-time-mom.herokuapp.com', 'localhost']  # noqa
 
 
 # Application definition
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'first-time-mom',
     'classes',
 ]
 
