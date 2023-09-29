@@ -56,7 +56,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'firsttimemom.urls'
+ROOT_URLCONF = 'first-time-mom.urls'
 
 TEMPLATES = [
     {
@@ -74,7 +74,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'firsttimemom.wsgi.application'
+WSGI_APPLICATION = 'first-time-mom.wsgi.application'
 
 
 # Database
