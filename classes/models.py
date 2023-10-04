@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class ActivityType(models.Model):
@@ -10,7 +11,7 @@ class ActivityType(models.Model):
         ('Yoga Session', 'Yoga Session'),
     ]
     type = models.CharField(
-        max_length=20, 
+        max_length=20,
         choices=type_choices,
         default='Course',
         )
@@ -26,7 +27,7 @@ class Activity(models.Model):
     locaton = models.CharField(max_length=200)
     max_participants = models.PositiveIntegerField(default=10)
     current_participants = models.PositiveIntegerField(default=0)
-    activity_type = models.ForeignKey(ActivityType, on_delete=models.CASCADE, blank=True)  # noqa
+    activity_type = models.ForeignKey(ActivityType, on_delete=models.CASCADE, null=True)  # noqa
 
     def __str__(self):
         return f"{self.name} on {self.date}"
@@ -46,3 +47,15 @@ class Activity(models.Model):
         verbose_name = 'Activity'
         verbose_name_plural = 'Activities'
         ordering = ['date']
+
+
+class Review(models.Model):
+    activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    rating = models.PositiveIntegerField()
+    comment = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"Review for {self.activity} by {self.user.username}"
