@@ -2,9 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class ActivityType(models.Model):
-    # name = models.CharField(max_length=200, unique=True)
-    # description = models.TextField(blank=True)
+class Activity(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    description = models.TextField()
+    date = models.DateTimeField()
+    locaton = models.CharField(max_length=200)
+    max_participants = models.PositiveIntegerField(default=10)
+    current_participants = models.PositiveIntegerField(default=0)
     type_choices = [
         ('Course', 'Class'),
         ('Group Counseling', 'Group Counseling'),
@@ -15,19 +19,6 @@ class ActivityType(models.Model):
         choices=type_choices,
         default='Course',
         )
-
-    # def __str__(self):
-    #     return self.name
-
-
-class Activity(models.Model):
-    name = models.CharField(max_length=200, unique=True)
-    description = models.TextField()
-    date = models.DateTimeField()
-    locaton = models.CharField(max_length=200)
-    max_participants = models.PositiveIntegerField(default=10)
-    current_participants = models.PositiveIntegerField(default=0)
-    activity_type = models.ForeignKey(ActivityType, on_delete=models.CASCADE, null=True)  # noqa
 
     def __str__(self):
         return f"{self.name} on {self.date}"
