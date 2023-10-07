@@ -32,7 +32,7 @@ class CustomUserAdmin(UserAdmin):
 
 @admin.register(Activity)
 class ActivityAdmin(admin.ModelAdmin):
-    list_display = ('name', 'date', 'max_participants',)
+    list_display = ('name', 'date', 'max_participants', 'type')
     list_filter = ('date', 'type')
     search_fields = ('activity_name', 'description')
 
