@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from .forms import CustomUserCreationForm, CustomUserChangeForm
-from .models import Activity, Review, CustomUser
+from .models import Activity, Review, CustomUser, Booking
 
 
 @admin.register(CustomUser)
@@ -35,6 +35,13 @@ class ActivityAdmin(admin.ModelAdmin):
     list_display = ('name', 'date', 'max_participants',)
     list_filter = ('date', 'type')
     search_fields = ('activity_name', 'description')
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = ('is_confirmed',)
+    list_filter = ('is_confirmed',)
+    search_fields = ('is_confirmed',)
 
 
 @admin.register(Review)

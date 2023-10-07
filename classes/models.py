@@ -46,38 +46,50 @@ class Activity(models.Model):
     name = models.CharField(max_length=200, unique=True)
     description = models.TextField()
     date = models.DateTimeField()
-    locaton = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
     max_participants = models.PositiveIntegerField(default=10)
-    current_participants = models.PositiveIntegerField(default=0)
     type_choices = [
-        ('Course', 'Class'),
+        ('Class', 'Class'),
         ('Group Counseling', 'Group Counseling'),
         ('Yoga Session', 'Yoga Session'),
     ]
     type = models.CharField(
         max_length=20,
         choices=type_choices,
-        default='Course',
+        default='Class',
         )
 
     def __str__(self):
         return f"{self.name} on {self.date}"
 
-    def is_full(self):
-        if not activity.is_full:
-            # users must sign up, when they book each activity,
-            # it will increement until capacity is reached
-            activity.current_participants += 1
-            activity.save()
-        else:
-            pass
-
-        return f"{self.current_participants}"
+    def current_num_of_participants(self):
+        num_bookings = Booking.objects.filter(activity=self,
+                                              is_confirmed=True).count()
+        return self.max_participants - num_bookings
 
     class Meta:
         verbose_name = 'Activity'
         verbose_name_plural = 'Activities'
         ordering = ['date']
+
+
+class Booking(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
+    activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
+    is_confirmed = models.BooleanField(default=False)
+
+    def is_space_available(self):
+        num_bookings = Booking.objects.filter(activity=self.activity,
+                                              is_confirmed=True).count()
+
+        return num_bookings < self.activity.max_participants
+
+    def __str__(self):
+        return f"Booking {self.id} by {self.user.email}"
+        f"for {self.activity.activity_name}"
 
 
 class Review(models.Model):
