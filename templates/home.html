@@ -2,24 +2,24 @@
 
 {% block additional_nav %}
 <ul>
-    <li><a href="{% url 'activities' %}">Activities</a></li>
-    <!-- <li><a href="{% url 'profile' %}">Profile</a></li> -->
-    <li><a href="{% url 'faqs' %}">FAQs</a></li>
+    <li><a href="#">Hub</a></li>
+    <li><a href="#">Activities</a></li>
+    <li><a href="#">FAQs</a></li>
 </ul>
 {% endblock %}
 
 {% block content %}
 
 <div class="user-profile">
-    <h1>Welcome, {{ user.username }}!</h1>
+    <h1>Welcome to first time mom, {{ user.username }}!</h1>
     <p>Customize your profile:</p>
-    <a href="{% url 'profile' %}" class="btn btn-primary">Edit Profile</a>
+    <a href="#" class="btn btn-primary">Edit Profile</a>
     <p>Your Booked Activities:</p>
     <ul>
         {% for booking in bookings %}
             <li>{{ booking.activity.name }}</li>
         {% endfor %}
     </ul>
-    <a href="{% url 'activity_list' %}" class="btn btn-primary">View Activities</a>
+    <a href="#" class="btn btn-primary">View Activities</a>
 </div>
 {% endblock %}

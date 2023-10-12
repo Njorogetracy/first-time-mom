@@ -1,9 +1,13 @@
 from django.views.generic import ListView, TemplateView
-from .models import Activity
+from .models import Activity,
 
 
 class IndexView(TemplateView):
     template_name = 'index.html'
+
+
+class HubView(TemplateView):
+    template_name = 'home.html'
 
 
 class ActivityListView(ListView):
