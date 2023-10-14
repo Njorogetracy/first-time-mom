@@ -50,6 +50,7 @@ class Activity(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE)
     max_participants = models.PositiveIntegerField(default=10)
+    is_cancelled = models.BooleanField(default=False)
     type_choices = [
         ('Class', 'Class'),
         ('Group Counseling', 'Group Counseling'),
@@ -80,6 +81,9 @@ class Booking(models.Model):
                              on_delete=models.CASCADE)
     activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
     is_confirmed = models.BooleanField(default=False)
+    due_date = models.DateField(null=True, blank=True)
+    has_journal = models.BooleanField(default=False)
+    needs_journal = models.BooleanField(default=False)
 
     def is_space_available(self):
         num_bookings = Booking.objects.filter(activity=self.activity,

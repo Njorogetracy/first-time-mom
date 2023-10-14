@@ -13,14 +13,16 @@
 <ul>
     {% for activity in activities %}
     <div class="activity">
-        <li>
             <h2>{{ activity.name }}</h2>
             <p>{{ activity.description }}</p>
             <p>Date: {{ activity.date }}</p>
             <p>Location: {{ activity.location }}</p>
             <p>Type: {{ activity.type }}</p>
             <p>Participants: {{ activity.current_num_of_participants }} / {{ activity.max_participants }}</p>
-        </li>
+
+            <form action="" method="post">
+                <button type="submit">Book</button>
+            </form>
     </div>
     {% endfor %}
 </ul>
