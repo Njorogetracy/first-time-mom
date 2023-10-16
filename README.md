@@ -25,3 +25,37 @@
 ## Credits
 ## Acknowledgements 
 
+
+# User Strories
+
+### As a developer I want:
+- New users to create an account
+- Returning users to login
+- Users to easily navigate through the pages
+- Users to reserve a spot
+- Users to book classes and activities
+- Users to cancel booking
+- Users to view location
+- Users to view opening and closing hours
+### As a user, I want: 
+- To create an account
+- Login
+- Book classes and activities
+- Cancel reservations in case of anything
+- Search activities
+- View location
+- View opening hours
+
+
+## Design
+
+
+## Wireframes
+
+### Project scope(5-planes)
+
+### Logic Flowchart
+- Find the logic flowchart **here**
+
+### ERD Design
+- Find the entity relation diagram **here**
