@@ -112,3 +112,36 @@ To clone the original repository:
 - Type git clone in your terminal, and then paste the URL you copied
 - Press Enter to create your local clone.
 
+## Technologies Used
+- HTML5
+- CSS3
+- JavaScript
+- Python
+### Frameworks, Libraries & Additional Programs/Software used
+- Django
+#### Libraries & Dependencies
+- [DJ-Database-URL](https://pypi.org/project/dj-database-url/)
+    - Generates the proper database configuration dictionary for the Django settings based on the `DATABASE_URL`
+      environment variable
+- [Gunicorn](https://gunicorn.org/)
+    - A production-grade WSGI server
+- [Django All Auth](https://django-allauth.readthedocs.io/en/latest/)
+### install packages
+pip install <package_name>
+### uninstall packages
+pip uninstall <package_name>
+### update requirements.txt file
+pip freeze --local > requirements.txt
+
+
+## Credits
+### References
+- [Agile User Story Template Spread Sheet, resource provided by Rebecca Tracey-Timoney](https://docs.google.com/spreadsheets/d/1E87iXrwStqmuy0DatpK8e-pD3ygBqotS91npelTbVVs/edit?usp=sharing)
+- [Test-Driven Development with Django, Django REST Framework and Docker](https://testdriven.io/courses/tdd-django)
+### Media
+
+
+## Acknowledgements
+- I am grateful for the invaluable guidance and support provided by my mentor, Mitko Bachvarov.
+- I am grateful to my husband for the unwavering commitment to my growth and success.
+- I am grateful to my friend and colleague, Sirinya Richardson who availled herself throughout my project, giving me guidance and feedback on how to improve my project.
