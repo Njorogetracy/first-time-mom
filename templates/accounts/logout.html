@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- <h1>Logout Successful</h1>
+  <p>You have been logged out. Thank you for visiting us!</p>
+  <p><a href="{% url 'index' %}">Return to Home</a></p> -->
+
+<div class="container">
+  <div class="">
+    <div class="">
+      <h3>{% trans "Sign Out" %}</h3>
+
+      <p>{% trans 'Are you sure you want to sign out?' %}</p>
+    </div>
+  </div>
+  <div class="">
+    <div class="">
+
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-signup" type="submit">{% trans 'Sign Out' %}</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Sign Up</h2>
+  <div>
+    <form method="POST" id="signup_form" class="signup" action="{% url 'account_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>
+      Already have an account? <a href="{% url 'account_login' %}">Log in</a>.
+    </p>
+</div>
+{% endblock %}

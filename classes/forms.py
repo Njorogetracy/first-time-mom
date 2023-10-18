@@ -10,12 +10,12 @@ class CustomUserCreationForm(UserCreationForm):
                                 help_text="Required. Enter your last name.")
 
     class Meta:
-        model = CustomUser()
+        model = CustomUser
         fields = ('email', 'first_name', 'last_name')
 
 
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
-        model = CustomUser()
-        fields = ('email',)
+        model = CustomUser
+        fields = ('email', 'first_name', 'last_name')

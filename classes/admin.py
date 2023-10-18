@@ -1,13 +1,13 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .forms import CustomUserCreationForm, CustomUserChangeForm
+# from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import Activity, Review, CustomUser, Booking
 
 
 @admin.register(CustomUser)
 class CustomUserAdmin(UserAdmin):
-    add_form = CustomUserCreationForm
-    form = CustomUserChangeForm
+    # add_form = CustomUserCreationForm
+    # form = CustomUserChangeForm
     model = CustomUser
     list_display = ('first_name', 'last_name',
                     'email', "is_staff", "is_active")

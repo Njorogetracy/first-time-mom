@@ -8,8 +8,14 @@
     <h1>First Time Mom</h1>
     <p>Walking with you as you prepare for you little one</p>
     <div class="auth-buttons">
-        <a href="#" class="btn btn-success">Sign Up</a>
-        <a href="#" class="btn btn-primary">Log In</a>
+        {% if user.is_authenticated %}
+        <P>Welcome, {{ user.first_name }}</P>
+        {% else %}
+        <P>Welcome Friend, please signup</P>
+        <a href="{% url 'account_signup' %}" class="btn btn-success">Sign Up</a>
+        <P>Welcome Friend, please login</P>
+        <a href="{% url 'account_login' %}" class="btn btn-primary">Log In</a>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
