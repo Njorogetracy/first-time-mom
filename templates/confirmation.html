@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block additional_nav %}
+<ul>
+    <li><a href="{% url 'hub' %}">Hub</a></li>
+    <li><a href="{% url 'activity_list' %}">Activities</a></li>
+    <li><a href="#">FAQs</a></li>
+</ul>
+{% endblock %}
+<h1>Booking Confirmed!</h1>
+<p>{{ request.user.first-name }}, your booking is confirmed. Thank you!</p>
+
+<a href="{% url 'activity_list' %}">Return to Activities</a>
+<a href="{% url 'hub' %}">Continue Exploring</a>
+
+{% block content %}
+
+
+{% endblock %}

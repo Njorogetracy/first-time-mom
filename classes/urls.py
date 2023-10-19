@@ -7,4 +7,6 @@ urlpatterns = [
     path('activities/', ActivityListView.as_view(), name='activity_list'),
     path('book/<int:activity_id>/',
          BookingView.as_view(), name='book_activity'),
+    path('booking-confirmation/',
+         BookingConfirmationView.as_view(), name='booking-confirmation'),
 ]

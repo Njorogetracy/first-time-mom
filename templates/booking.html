@@ -2,30 +2,39 @@
 
 {% block additional_nav %}
 <ul>
-    <li><a href="#">Hub</a></li>
-    <li><a href="#">Activities</a></li>
+    <li><a href="{% url 'hub' %}">Hub</a></li>
+    <li><a href="{% url 'activity_list' %}">Activities</a></li>
     <li><a href="#">FAQs</a></li>
 </ul>
 {% endblock %}
 
 {% block content %}
-    <h1>Booking</h1>
+<h1>Booking</h1>
+
+{% if activity.current_num_of_participants < activity.max_participants %}
+<form method="post">
+    {% csrf_token %}
+
+    <label for="{{ form.due_date.id_for_label }}">Due date</label>
+    {{ form.due_date }}
+    <br>
+
+    <label for="{{ form.has_journal.id_for_label }}">Do you have a journal?</label>
+    {{ form.has_journal }}
+    <br>
+
+    <label for="{{ form.needs_journal.id_for_label }}">Do you need a journal?</label>
+    {{ form.needs_journal }}
+    <br>
+
+    <button type="submit">Confirm Booking</button>
+</form>
+{% else %}
+<p>
     
-    <form method="post">
-        {% csrf_token %}
+    Sorry, this activity is fully booked. Please check other <a href="{% url 'activity_list' %}">activities.</a>
 
-        <label for="{{ form.due_date.id_for_label }}">Due date</label>
-        {{ form.due_date }}
-        <br>
+</p>
+{% endif %}
 
-        <label for="{{ form.has_journal.id_for_label }}">Do you have a journal?</label>
-        {{ form.has_journal }}
-        <br>
-
-        <label for="{{ form.needs_journal.id_for_label }}">Do you need a journal?</label>
-        {{ form.needs_journal }}
-        <br>
-        
-        <button type="submit">Confirm Booking</button>
-    </form>
 {% endblock %}

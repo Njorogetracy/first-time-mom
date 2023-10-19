@@ -20,4 +20,24 @@ class ActivityListView(ListView):
 class BookingView(FormView):
     form_class = BookingForm
     template_name = 'booking.html'
-    success_url = 'thank-you'
+
+    def form_valid(self, form):
+        activity = Activity.objects.get(pk=self.kwargs['activity_id'])
+        max_participants = activity.max_participants
+        num_bookings = Booking.objects.filter(activity=activity,
+                                              is_confirmed=True).count()
+
+        if num_bookings < max_participants:
+            return redirect('booking-confirmation')
+        else:
+            return render(self.request,
+                          'fully_booked.html', {'activity': activity})
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['activity'] = Activity.objects.get(pk=self.kwargs['activity_id'])  # noqa
+        return context
+
+
+class BookingConfirmationView(TemplateView):
+    template_name = 'confirmation.html'

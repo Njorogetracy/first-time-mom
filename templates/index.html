@@ -3,7 +3,7 @@
 {% block nav %}
 <ul>
     <li>
-        <a href="#">Home</a>
+        <a href="{% url 'index' %}">Home</a>
     </li>
     <li>
         <a href="#">About</a>
@@ -22,9 +22,9 @@
         {% if user.is_authenticated %}
         <P>Welcome, {{ user.first_name }}</P>
         {% else %}
-        <P>Welcome Friend, please signup</P>
+        <P>Welcome Mama! please signup</P>
         <a href="{% url 'account_signup' %}" class="btn btn-success">Sign Up</a>
-        <P>Welcome Friend, please login</P>
+        <P>Welcome Mama! please login</P>
         <a href="{% url 'account_login' %}" class="btn btn-primary">Log In</a>
         {% endif %}
     </div>
