@@ -20,9 +20,7 @@
             <p>Type: {{ activity.type }}</p>
             <p>Participants: {{ activity.current_num_of_participants }} / {{ activity.max_participants }}</p>
 
-            <form action="" method="post">
-                <button type="submit">Book</button>
-            </form>
+            <a href="{% url 'book_activity' activity.id %}">Book</a>
     </div>
     {% endfor %}
 </ul>

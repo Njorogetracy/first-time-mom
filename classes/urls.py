@@ -5,4 +5,6 @@ urlpatterns = [
     path('', IndexView.as_view(), name='index'),  # for users not registered
     path('hub/', HubView.as_view(), name='hub'),  # homepage for loggedin
     path('activities/', ActivityListView.as_view(), name='activity_list'),
+    path('book/<int:activity_id>/',
+         BookingView.as_view(), name='book_activity'),
 ]

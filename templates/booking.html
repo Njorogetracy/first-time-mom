@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block additional_nav %}
+<ul>
+    <li><a href="#">Hub</a></li>
+    <li><a href="#">Activities</a></li>
+    <li><a href="#">FAQs</a></li>
+</ul>
+{% endblock %}
+
+{% block content %}
+    <h1>Booking</h1>
+    
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="{{ form.due_date.id_for_label }}">Due date</label>
+        {{ form.due_date }}
+        <br>
+
+        <label for="{{ form.has_journal.id_for_label }}">Do you have a journal?</label>
+        {{ form.has_journal }}
+        <br>
+
+        <label for="{{ form.needs_journal.id_for_label }}">Do you need a journal?</label>
+        {{ form.needs_journal }}
+        <br>
+        
+        <button type="submit">Confirm Booking</button>
+    </form>
+{% endblock %}
