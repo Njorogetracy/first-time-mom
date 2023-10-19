@@ -20,6 +20,6 @@
             <li>{{ booking.activity.name }}</li>
         {% endfor %}
     </ul>
-    <a href="#" class="btn btn-primary">View Activities</a>
+    <a href="{% url 'activity_list' %}" class="btn btn-primary">View Activities</a>
 </div>
 {% endblock %}
