@@ -1,5 +1,26 @@
 {% extends "base.html" %}
 
+{% block additional_nav %}
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'hub' %}">Hub</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">FAQs</a>
+    </li>
+</ul>
+{% endblock %}
+
 {% block content %}
   <h2>Leave Review</h2>
   <form method="post">

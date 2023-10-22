@@ -1,25 +1,55 @@
 {% extends 'base.html' %}
 
 {% block additional_nav %}
-<ul>
-    <li><a href="{% url 'hub' %}">Hub</a></li>
-    <li><a href="{% url 'activity_list' %}">Activities</a></li>
-    <li><a href="#">FAQs</a></li>
-    <li><a href="{% url 'user_booked_activities' %}">My activities</a></li>
-    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'hub' %}">Hub</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">FAQs</a>
+    </li>
 </ul>
 {% endblock %}
 
 {% block content %}
 
-<div class="user-profile">
-    <h1>Welcome to first time mom, {{ email }}!</h1>
-    <p><a href="{% url 'user_booked_activities' %}">My activities</a></p>
-    <ul>
-        {% for booking in bookings %}
+
+<div class="user-profile container text-center">
+    <div class="centered-content">
+        <h1>Welcome to first time mom, {{ user.email }}!</h1>
+        <div>
+            <img src="../static/assets/images/pexels-tima-miroshnichenko.jpg"
+                alt="image of woman holding a pregnancy picture" class="img-fluid centered-image">
+        </div>
+        <p class="welcome-content">
+            Congratulations on your journey into motherhood! First-Time-Mom is here to provide new mothers like you
+            with essential resources and unwavering support. Whether you're seeking expert advice, connecting with
+            fellow
+            mothers, or finding inspiration, we're by your side to make your unique journey smoother and more
+            fulfilling.
+            Welcome, and let's embrace motherhood together!
+        </p>
+        <ul>
+            {% for booking in bookings %}
             <li>{{ booking.activity.name }}</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'activity_list' %}" class="btn btn-primary">View Activities</a>
+            {% endfor %}
+        </ul>
+        <p class="explore">
+            Explore our activities:
+        </p>
+        <a href="{% url 'activity_list' %}" class="btn custom-btn">View Activities</a>
+        <!-- <p>View your activities<a href="{% url 'user_booked_activities' %}">My activities</a></p> -->
+    </div>
 </div>
+
 {% endblock %}
