@@ -1,9 +1,6 @@
-from django.db import transaction
-from django.db.models import F
 from django.views.generic import ListView, TemplateView, FormView, CreateView  # noqa
 from django.db.models import Avg
 from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
 from .models import Activity, Booking, Review
 from .forms import BookingForm, ReviewForm
 
@@ -20,6 +17,8 @@ class ActivityListView(ListView):
     model = Activity
     template_name = 'activity_list.html'
     context_object_name = 'activities'
+    paginate_by = 5
+    ordering = 'name'
 
     def get_queryset(self):
         return Activity.objects.annotate(average_rating=Avg('review__rating'))
