@@ -39,7 +39,9 @@ class ActivityAdmin(admin.ModelAdmin):
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('is_confirmed',)
+    list_display = ('id', 'user', 'activity',
+                    'is_confirmed', 'due_date',
+                    'has_journal', 'needs_journal')
     list_filter = ('is_confirmed',)
     search_fields = ('is_confirmed',)
 

@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser, Booking
+from .models import CustomUser, Review, Booking
 
 
 class CustomUserCreationForm(UserCreationForm):
@@ -19,6 +19,12 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
         fields = ('email', 'first_name', 'last_name')
+
+
+class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['rating', 'comment']
 
 
 class BookingForm(forms.ModelForm):

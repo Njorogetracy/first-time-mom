@@ -5,17 +5,22 @@
     <li><a href="{% url 'hub' %}">Hub</a></li>
     <li><a href="{% url 'activity_list' %}">Activities</a></li>
     <li><a href="#">FAQs</a></li>
+    <li><a href="{% url 'user_booked_activities' %}">My activities</a></li>
+    <li><a href="{% url 'account_logout' %}">Logout</a></li>
 </ul>
 {% endblock %}
 
 {% block content %}
-<h1>Booking</h1>
+<h2>Booking: {{ activity.name }}</h2>
+<p>{{ activity.description }}</p>
 
-{% if activity.current_num_of_participants < activity.max_participants %}
+
 <form method="post">
     {% csrf_token %}
 
-    <label for="{{ form.due_date.id_for_label }}">Due date</label>
+    {{ form.as_p }}
+
+    <!-- <label for="{{ form.due_date.id_for_label }}">Due date</label>
     {{ form.due_date }}
     <br>
 
@@ -25,16 +30,16 @@
 
     <label for="{{ form.needs_journal.id_for_label }}">Do you need a journal?</label>
     {{ form.needs_journal }}
-    <br>
-
-    <button type="submit">Confirm Booking</button>
+    <br> -->
+    <a href="{% url 'booking-confirmation' %}">Confirm Booking</a>
+    <!-- <button type="submit">Confirm Booking</button> -->
 </form>
-{% else %}
-<p>
+
+<!-- <p>
     
     Sorry, this activity is fully booked. Please check other <a href="{% url 'activity_list' %}">activities.</a>
 
-</p>
-{% endif %}
+</p> -->
+
 
 {% endblock %}

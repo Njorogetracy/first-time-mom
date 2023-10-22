@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Leave Review</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit">Submit Review</button>
+  </form>
+  <a href="{% url 'activity_list' %}">Back to Activities</a>
+{% endblock %}
