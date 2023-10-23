@@ -97,7 +97,8 @@ class Booking(models.Model):
 
 
 class Review(models.Model):
-    activity = models.ForeignKey(Activity, on_delete=models.CASCADE)
+    activity = models.ForeignKey(Activity,
+                                 on_delete=models.CASCADE)
     user = models.ForeignKey(settings.AUTH_USER_MODEL,
                              on_delete=models.CASCADE)
     rating = models.PositiveIntegerField(

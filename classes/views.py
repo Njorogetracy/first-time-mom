@@ -18,6 +18,14 @@ class ActivityListView(ListView):
     model = Activity
     template_name = 'activity_list.html'
     paginate_by = 5
+    context_object_name = 'activities'
+  
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        for activity in context['activities']:
+            activity.reviews = activity.review_set.all()
+            activity.avg_rating = activity.reviews.aggregate(Avg('rating'))['rating__avg']
+        return context
 
 
 class ReviewCreateView(CreateView):
@@ -40,7 +48,7 @@ class ReviewListView(ListView):
 
     def get_queryset(self):
         activity_id = self.kwargs['activity_id']
-        return Review.objects.filter(activity_id=activity_id, approved=False)
+        return Review.objects.filter(activity_id=activity_id, approved=True)
 
 
 class BookingView(FormView):
