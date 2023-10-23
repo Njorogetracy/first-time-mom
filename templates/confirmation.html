@@ -15,22 +15,25 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">FAQs</a>
-    </li>
 </ul>
 {% endblock %}
 
 {% block content %}
 
-<h1>Booking Confirmed!</h1>
-{% for booking in bookings %}
-<h2>{{ booking.activity.name }}</h2>
-{% endfor %}
-<p>Thank you {{ user.email }}, your booking for {{ activity.name }} is confirmed!</p>
+<div class="container centered-container">
+    <h1 class="activity-title">Booking Confirmed!</h1>
 
-<a href="{% url 'activity_list' %}">Return to Activities</a>
-<a href="{% url 'user_booked_activities' %}">My Activities</a>
+    <!-- Loop through bookings -->
+    {% for booking in bookings %}
+    <div class="activity">
+        <h2>{{ booking.activity.name }}</h2>
+    </div>
+    {% endfor %}
+
+    <p class="activity-thank-you">Thank you, {{ user.email }}, your booking for {{ activity.name }} is confirmed!</p>
+    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+    <a class="btn btn-success" href="{% url 'user_booked_activities' %}">My Activities</a>
+</div>
 
 
 {% endblock %}

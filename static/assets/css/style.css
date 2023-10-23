@@ -125,7 +125,7 @@ header {
 
 .activity h2 {
     font-size: 24px;
-    color: #224c28; /* Change font color to #224c28 */
+    color: #224c28; 
 }
 
 .activity p {
@@ -151,20 +151,8 @@ header {
 
 .pagination .page-link {
     background-color: #e84c3e; 
-    color: #fff;
-    border: 1px solid #e84c3e; 
-    margin: 0 5px;
-}
-
-.pagination .page-link:hover {
-    background-color: #c73926;
-    border: 1px solid #c73926;
-}
-
-.pagination .current-page {
-    margin: 0 10px;
-    font-size: 16px;
     color: #224c28;
+    border: 1px solid #e84c3e; 
 }
 
 /* Style the buttons */
@@ -173,13 +161,13 @@ header {
 }
 
 .btn-primary {
-    background-color: #e84c3e; /* Change button color to #e84c3e */
-    border: 1px solid #e84c3e; /* Change border color to #e84c3e */
+    background-color: #e84c3e; 
+    border: 1px solid #e84c3e; 
     color: #224c28;
 }
 
 .btn-primary:hover {
-    background-color: #c73926; /* Change hover color to a darker shade */
+    background-color: #c73926; 
     border: 1px solid #c73926;
 }
 
@@ -204,3 +192,16 @@ header {
     background-color: #e84c3e;
     border: 1px solid #e84c3e;
 }
+
+
+/* Booking styles */
+.booking {
+    background-color: #fdffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* user booked actitivies styles */

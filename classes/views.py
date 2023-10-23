@@ -18,10 +18,10 @@ class ActivityListView(ListView):
     template_name = 'activity_list.html'
     context_object_name = 'activities'
     paginate_by = 5
-    ordering = 'name'
 
     def get_queryset(self):
-        return Activity.objects.annotate(average_rating=Avg('review__rating'))
+        queryset = Activity.objects.annotate(average_rating=Avg('review__rating')).order_by('name')  # noqa
+        return queryset
 
 
 class ReviewCreateView(CreateView):
@@ -71,7 +71,7 @@ class BookingView(FormView):
             booked_activities = Booking.objects.filter(user=user, is_confirmed=True)  # noqa
 
             if num_bookings < max_participants:
-                return render(self.request, 'booking-confirmation.html', {'booked_activities': booked_activities})  # noqa
+                return render(self.request, 'confirmation.html', {'booked_activities': booked_activities})  # noqa
             else:
                 return render(self.request,
                               'fully_booked.html', {'activity': activity})

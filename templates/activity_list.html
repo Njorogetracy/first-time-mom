@@ -15,9 +15,6 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">FAQs</a>
-    </li>
 </ul>
 {% endblock %}
 
@@ -40,56 +37,7 @@
             <span class="star {% if i|add:"-1" < activity.average_rating %}filled{% endif %}"></span>
             {% endfor %}
         </p>
-        <h4>Reviews:</h4>
-        <ul class="list-unstyled">
-            {% for review in activity.reviews.all %}
-            <li>
-                <p>Comment: {{ review.comment }}</p>
-            </li>
-            {% endfor %}
-        </ul>
-        <a class="btn btn-primary" href="{% url 'book_activity' activity.id %}">Book</a>
-        <a class="btn btn-success" href="{% url 'create_review' activity_id=activity.id %}">Leave a Review</a>
-        <a class="btn btn-info" href="{% url 'activity_review' activity.id %}">See Reviews</a>
-    </div>
-    {% endfor %}
-
-    <!-- Display pagination controls -->
-    <div class="pagination">
-        <span class="step-links">
-            {% if activities.has_previous %}
-            <a href="?page=1">&laquo; first</a>
-            <a href="?page={{ activities.previous_page_number }}">previous</a>
-            {% endif %}
-
-            <span class="current-page">Page {{ activities.number }} of {{ activities.paginator.num_pages }}.</span>
-
-            {% if activities.has_next %}
-            <a href="?page={{ activities.next_page_number }}">next</a>
-            <a href="?page={{ activities.paginator.num_pages }}">last &raquo;</a>
-            {% endif %}
-        </span>
-    </div>
-</div>
-<div class="container">
-    <h1>Activities</h1>
-
-    <!-- Loop through activities -->
-    {% for activity in activities %}
-    <div class="activity">
-        <h2>{{ activity.name }}</h2>
-        <p>{{ activity.description }}</p>
-        <p>Date: {{ activity.date }}</p>
-        <p>Location: {{ activity.location }}</p>
-        <p>Type: {{ activity.type }}</p>
-        <p>Available Slots: {{ activity.current_num_of_participants }}/{{ activity.max_participants }}</p>
-        <p>
-            Rating:
-            {% for i in "12345" %}
-            <span class="star {% if i|add:"-1" < activity.average_rating %}filled{% endif %}"></span>
-            {% endfor %}
-        </p>
-        <h4>Reviews:</h4>
+        <h4>Comment:</h4>
         <ul class="list-unstyled">
             {% for review in activity.reviews.all %}
             <li>
@@ -104,28 +52,21 @@
     {% endfor %}
 
     <!--pagination-->
-    {% if is_paginated %}
+    <!-- {% if is_paginated %} -->
     <nav aria-label="Page navigation">
         <ul class="pagination">
             {% if activities.has_previous %}
             <li class="page-item">
-                <a href="?page={{ activities.previous_page_number }}" class="page-link" aria-label="Previous">
-                    <span aria-hidden="true">&laquo; PREV</span>
-                </a>
+                <a href="?page={{ activities.previous_page_number }}" class="page-link" aria-label="Previous">&laquo; PREV</a>
             </li>
             {% endif %}
             {% if activities.has_next %}
             <li class="page-item">
-                <a href="?page={{ activities.next_page_number }}" class="page-link" aria-label="Next">
-                    <span aria-hidden="true">NEXT &raquo;</span>
-                </a>
+                <a href="?page={{ activities.next_page_number }}" class="page-link" aria-label="Next">NEXT &raquo;</a>
             </li>
             {% endif %}
         </ul>
     </nav>
-    {% endif %}
-
+    <!-- {% endif %} -->
 </div>
-
-
 {% endblock %}

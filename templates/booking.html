@@ -15,36 +15,25 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">FAQs</a>
-    </li>
 </ul>
 {% endblock %}
 
 {% block content %}
-<h2>Booking: {{ activity.name }}</h2>
-<p>{{ activity.description }}</p>
 
+<div class="container centered-container">
+    <div class="booking">
+        <h2>Booking: {{ activity.name }}</h2>
+        <p>{{ activity.description }}</p>
+        <form method="POST">
+            {% csrf_token %}
 
-<form method="post">
-    {% csrf_token %}
+            {{ form.as_p }}
 
-    {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Confirm Booking</button>
+        </form>
+    </div>
+</div>
 
-    <!-- <label for="{{ form.due_date.id_for_label }}">Due date</label>
-    {{ form.due_date }}
-    <br>
-
-    <label for="{{ form.has_journal.id_for_label }}">Do you have a journal?</label>
-    {{ form.has_journal }}
-    <br>
-
-    <label for="{{ form.needs_journal.id_for_label }}">Do you need a journal?</label>
-    {{ form.needs_journal }}
-    <br> -->
-    <a href="{% url 'booking-confirmation' %}">Confirm Booking</a>
-    <!-- <button type="submit">Confirm Booking</button> -->
-</form>
 
 <!-- <p>
     
