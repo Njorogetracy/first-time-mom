@@ -205,3 +205,39 @@ header {
 }
 
 /* user booked actitivies styles */
+.activity-title {
+    font-size: 24px;
+    color: #224c28;
+    margin: 20px 0;
+}
+
+.activity-thank-you {
+    font-size: 16px;
+    color: #224c28;
+    margin-bottom: 10px;
+}
+
+.activity-user-list {
+    list-style: none;
+    padding: 0;
+}
+
+.activity-user-list li {
+    margin-bottom: 20px;
+    border: 1px solid #e84c3e;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.activity-user-list li strong {
+    font-weight: bold;
+    color: #224c28;
+}
+
+.activity-user-list li strong::after {
+    content: ":";
+}
+
+.activity-user-list li br {
+    display: none;
+}

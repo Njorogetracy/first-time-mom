@@ -112,12 +112,14 @@ class BookingListView(ListView):
     context_object_name = 'bookings'
 
 
-class UserBookedActivitiesView(ListView):
-    model = Booking
+class UserBookedActivitiesView(View):
     template_name = 'user_booked_activities.html'
-    context_object_name = 'user_booked_activities'
 
-    def get_queryset(self):
-        user = self.request.user
+    def get(self, request):
+        user = request.user
         email = user.email
-        return Booking.objects.filter(user=user, is_confirmed=True)
+        bookings = Booking.objects.filter(user=user, is_confirmed=True)
+        context = {
+            'bookings': bookings,
+        }
+        return render(request, self.template_name, context)

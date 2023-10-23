@@ -21,19 +21,19 @@
 {% block content %}
 
 <div class="container centered-container">
-    <h1>My Booked Activities</h1>
-
-    <!-- Loop through bookings -->
-
-    <p>Thank you, {{ user.email }}, for booking the following activities:</p>
-    <ul id="user-activities-list">
+    <h1 class="activity-title">Your Bookings</h1>
+    <p class="activity-thank-you">Thank you, {{ user.email }}, for booking the following activities:</p>
+    <ul id="user-activities-list" class="activity-user-list">
         {% for booking in bookings %}
         <li>
-            {{ booking.activity.name }} - {{ booking.activity.date }}
+            <strong>Activity:</strong> {{ booking.activity.name }}<br>
+            <strong>Date:</strong> {{ booking.activity.date }}<br>
+            <strong>Location:</strong> {{ booking.activity.location }}<br>
         </li>
         {% empty %}
         <li>No bookings found.</li>
         {% endfor %}
     </ul>
+    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
 </div>
 {% endblock %}
