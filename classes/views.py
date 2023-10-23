@@ -17,12 +17,7 @@ class HubView(TemplateView):
 class ActivityListView(ListView):
     model = Activity
     template_name = 'activity_list.html'
-    context_object_name = 'activities'
     paginate_by = 5
-
-    def get_queryset(self):
-        queryset = Activity.objects.annotate(average_rating=Avg('review__rating')).order_by('name')  # noqa
-        return queryset
 
 
 class ReviewCreateView(CreateView):
