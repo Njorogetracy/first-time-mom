@@ -57,6 +57,19 @@ class BookingView(FormView):
         activity = Activity.objects.get(pk=self.kwargs['activity_id'])
         user = self.request.user
         email = user.email
+
+        existing_booking = Booking.objects.filter(user=user,
+                                                  activity=activity,
+                                                  is_confirmed=True).first()
+        if existing_booking:
+            return render(self.request, 
+                          'already_booked.html', {'activity': activity})
+
+        booking = form.save(commit=False)
+        booking.user = user
+        booking.activity = activity
+        booking.save()
+
         num_bookings = Booking.objects.filter(activity=activity,
                                               is_confirmed=True).count()
         max_participants = activity.max_participants

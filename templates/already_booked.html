@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block additional_nav %}
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'hub' %}">Hub</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block content %}
+
+<div class="container centered-container">
+    <h1 class="activity-title">Already Booked</h1>
+    <h1>You have already booked this activity</h1>
+    <p>You can only book an activity once.</p>
+    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+</div>
+{% endblock %}
