@@ -1,4 +1,5 @@
-from django.views.generic import ListView, TemplateView, FormView, CreateView  # noqa
+from django.views.generic import ListView, TemplateView, FormView, CreateView
+from django.views import View
 from django.db.models import Avg
 from django.shortcuts import redirect, render
 from .models import Activity, Booking, Review
@@ -88,13 +89,21 @@ class BookingView(FormView):
         return context
 
 
-class BookingConfirmationView(TemplateView):
+class BookingConfirmationView(View):
     template_name = 'confirmation.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['confirmation_message'] = "Your booking was successful!"
-        return context
+    def get(self, request, booking_id):
+        booking = Booking.objects.get(pk=booking_id)
+        activity = booking.activity
+        user = booking.user
+
+        context = {
+            'booking': booking,
+            'activity': activity,
+            'user': user,
+        }
+
+        return render(request, self.template_name, context)
 
 
 class BookingListView(ListView):

@@ -11,7 +11,7 @@ urlpatterns = [
          ReviewListView.as_view(), name='activity_review'),
     path('book/<int:activity_id>/',
          BookingView.as_view(), name='book_activity'),
-    path('book/booking-confirmation/',
+    path('book/<int:booking_id>/booking-confirmation/',
          BookingConfirmationView.as_view(), name='booking-confirmation'),
     path('bookings/', BookingListView.as_view(), name='booking_list'),
     path('user_booked_activities/',
