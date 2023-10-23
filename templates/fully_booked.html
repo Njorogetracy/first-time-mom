@@ -21,19 +21,9 @@
 {% block content %}
 
 <div class="container centered-container">
-    <h1 class="activity-title">Your Bookings</h1>
-    <p class="activity-thank-you">Thank you, {{ user.email }}, for booking the following activities:</p>
-    <ul id="user-activities-list" class="activity-user-list">
-        {% for booking in bookings %}
-        <li>
-            <strong>Activity</strong> {{ booking.activity.name }}<br>
-            <strong>Date</strong> {{ booking.activity.date }}<br>
-            <strong>Location</strong> {{ booking.activity.location }}<br>
-        </li>
-        {% empty %}
-        <li>No bookings found.</li>
-        {% endfor %}
-    </ul>
+    <h1 class="activity-title">Fully Booked</h1>
+    <h1>This activity is fully booked</h1>
+    <p>Sorry, all available slots for this activity have been filled.</p>
     <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
 </div>
 {% endblock %}

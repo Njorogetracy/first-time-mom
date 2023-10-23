@@ -5,7 +5,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="{% url 'index' %}">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">About</a>
@@ -16,21 +16,28 @@
 {% endblock %}
 
 {% block content %}
-<div>
-    <img src="" alt="">
-</div>
-<div class="landing-page">
-    <h1>First Time Mom</h1>
-    <p>Walking with you as you prepare for you little one</p>
-    <div class="auth-buttons">
-        {% if user.is_authenticated %}
-        <P>Welcome, {{ user.first_name }}</P>
-        {% else %}
-        <P>Welcome Mama! please signup</P>
-        <a href="{% url 'account_signup' %}" class="btn btn-success">Sign Up</a>
-        <P>Welcome Mama! please login</P>
-        <a href="{% url 'account_login' %}" class="btn btn-primary">Log In</a>
-        {% endif %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="landing-page">
+                <h1>First Time Mom</h1>
+                <p>Walking with you as you prepare for your little one</p>
+                <div class="auth-buttons">
+                    {% if user.is_authenticated %}
+                    <p>Welcome, {{ user.first_name }}</p>
+                    {% else %}
+                    <p>Welcome Mama! Please sign up</p>
+                    <a href="{% url 'account_signup' %}" class="btn btn-success">Sign Up</a>
+                    <p>Welcome Mama! Please log in</p>
+                    <a href="{% url 'account_login' %}" class="btn btn-primary">Log In</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="your-image-source.jpg" alt="Image Description">
+        </div>
     </div>
 </div>
+
 {% endblock %}
