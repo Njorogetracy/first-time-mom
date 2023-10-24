@@ -59,6 +59,17 @@
 ## Design
 - This is the color scheme used for the website: ![Color](static/assets/images/readme/colour.png)
 ## Wireframes
+- Find the wireframes below:
+- ![landing](static/assets/images/readme/landing-pg.png)
+- ![landing2](static/assets/images/readme/landing2.png)
+- ![home](static/assets/images/readme/home.png)
+- ![signup](static/assets/images/readme/sigup.png)
+- ![login](static/assets/images/readme/login.png)
+- ![activites](static/assets/images/readme/activites.png)
+- ![classes](static/assets/images/readme/classes.png)
+- ![yoga](static/assets/images/readme/yoga.png)
+- ![counselling](static/assets/images/readme/counselling.png)
+- ![maps](static/assets/images/readme/maps.png)
 
 ### Project scope(5-planes)
 - Find the project design thinking process below:
@@ -66,6 +77,9 @@
 - ![User-needs](static/assets/images/readme/user-needs.jpg)
 - ![Opportunity-matrices](static/assets/images/readme/opportunity-matrices.jpg)
 - ![Scope](static/assets/images/readme/scope.jpg)
+
+### Github user-stories
+- Find the user stories ![here](static/assets/images/readme/user-stories.png)
 
 ### Logic Flowchart
 - Find the logic flowchart ![here](static/assets/images/readme/FTM-logic.jpeg)
