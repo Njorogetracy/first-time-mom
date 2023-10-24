@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block nav-list %}
+
+<ul class="nav">
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'hub' %}">Hub</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+</ul>
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Cancellation Confirmation</h1>
+    <p>Are you sure you want to cancel your booking for {{ booking.activity.name }}?</p>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" name="confirm" value="Yes, Cancel" class="btn btn-danger">
+        <a class="btn btn-primary" href="{% url 'user_booked_activities' %}">No, Go Back</a>
+    </form>
+</div>
+{% endblock %}

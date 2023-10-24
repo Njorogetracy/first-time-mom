@@ -30,6 +30,7 @@
             <strong>Date</strong> {{ booking.activity.date }}<br>
             <strong>Location</strong> {{ booking.activity.location }}<br>
         </li>
+        <a href="{% url 'cancel-booking' booking.id %}" class="btn btn-danger">Cancel</a>
         {% empty %}
         <li>No bookings found.</li>
         {% endfor %}
