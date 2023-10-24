@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load rating_tags %}
+
 {% block additional_nav %}
 
 <ul class="nav">
@@ -31,11 +33,8 @@
         <p>Location: {{ activity.location }}</p>
         <p>Type: {{ activity.type }}</p>
         <p>Available Slots: {{ activity.current_num_of_participants }}/{{ activity.max_participants }}</p>
-        <p>
-            Rating: {{ activity.avg_rating|floatformat:0  }}
-            <!-- {% for i in "12345" %}
-            <span class="star {% if i|add:'-1' < activity.avg_rating %}filled{% endif %}"></span>
-            {% endfor %} -->
+        <p class="star" >
+            Rating: {% rating_stars activity.avg_rating %}
         </p>
         <p>Comment: {{ activity.reviews.first.comment }}</p>
         <a class="btn btn-primary" href="{% url 'book_activity' activity.id %}">Book</a>
