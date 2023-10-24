@@ -20,19 +20,21 @@
 
 {% block content %}
 <div class="container">
-    {% if submitted %}
-    <div class="thank-you-message">
-        <p>Thank you for your review!</p>
-        <p>You can now return to the activities list.</p>
-        <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
-    </div>
-    {% else %}
-    <h2>Leave Review</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">Submit Review</button>
-    </form>
-    {% endif %} 
+  <h1>Reviews for {{ activity.name }}</h1>
+
+  <ul>
+    {% for review in reviews %}
+      <li>
+        <p>Activity: {{ review.activity }}</p>
+        <p>Rating: {{ review.rating }}</p>
+        <p>Comment: {{ review.comment }}</p>
+        <p>Posted by: {{ review.user }}</p>
+      </li>
+    {% empty %}
+      <li>No reviews available.</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'activity_list' %}">Back to Activities</a>
 </div>
 {% endblock %}
