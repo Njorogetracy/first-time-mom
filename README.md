@@ -4,26 +4,29 @@
 
 
 # Table of Contents
-## UX
-## Design
-- Colors 
-- Typography 
-- Images/Icons
-- Responsiveness 
-## Wireframes 
-## Features
-- Navigation
-- Home page
-- Error pages
-- Future Developments 
-## Testing 
-### Validation Testing 
-### Lighthouse
-### Manual Testing 
-## Deoployment and Version control 
-## Technologies Used
-## Credits
-## Acknowledgements 
+1. [Project Goals](#project-goals)
+    - [Site Owner Goals](#site-owner-goal)
+    - [User Goals](#user-goals)
+2. [User Experience](#user-experience)
+    - [Target Audience](#target-audience)
+    - [User Stories](#user-stories)   
+3. [Design](#design)
+    - [Colour](#colour)
+    - [Typography](#typography)
+4. - [Wireframes](#wireframes)
+5. - [Features](#features)
+6. - [Testing](#testing)
+    - [Function Testing](#function-testing)
+    - [Performance](#perfomance)
+    - [Validation](#validation)
+    - [HTML](#HTML)
+    - [CSS](#CSS)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Bugs](#bugs)
+7. - [Deployment and version control](#deployment)
+8. - [Technologies used](#technologies-used)
+9. - [Credits](#credits)
+10. - [Acknowledgements](#acknowledgements)
 
 
 # User Strories
