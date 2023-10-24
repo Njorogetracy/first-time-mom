@@ -32,33 +32,43 @@
 - New users to create an account
 - Returning users to login
 - Users to easily navigate through the pages
-- Users to reserve a spot
-- Users to book classes and activities
+- Users to book activities
+- Users to recieve confirmation after booking
 - Users to cancel booking
+- Users to review activities
 - Users to view location
-- Users to view opening and closing hours
+- Users to view activity information
 ### As a user, I want: 
-- To create an account
-- Login
-- Book classes and activities
-- Cancel reservations in case of anything
-- Search activities
+- Signup as new user
+- Login as returning user
+- Logout
+- Book activities
+- Recieve confirmation after booking
+- Cancel bookings
+- View all activities
+- View users personally booked activities
+- Review activities
+- View reviews
 - View location
 - View opening hours
 
 
 ## Design
-
-
+- This is the color scheme used for the website: ![Color](static/assets/images/readme/colour.png)
 ## Wireframes
 
 ### Project scope(5-planes)
+- Find the project design thinking process below:
+- ![Target-audience](static/assets/images/readme/strategy-ta.jpg)
+- ![User-needs](static/assets/images/readme/user-needs.jpg)
+- ![Opportunity-matrices](static/assets/images/readme/opportunity-matrices.jpg)
+- ![Scope](static/assets/images/readme/scope.jpg)
 
 ### Logic Flowchart
-- Find the logic flowchart **here**
+- Find the logic flowchart ![here](static/assets/images/readme/FTM-logic.jpeg)
 
 ### ERD Design
-- Find the entity relation diagram **here**
+- Find the entity relation diagram ![here](static/assets/images/readme/FTM-ERD.jpeg)
 
 # Deoployment and Version control 
 
@@ -117,7 +127,7 @@ To clone the original repository:
 - CSS3
 - JavaScript
 - Python
-### Frameworks, Libraries & Additional Programs/Software used
+#### Frameworks, Libraries & Additional Programs/Software used
 - Django
 #### Libraries & Dependencies
 - [DJ-Database-URL](https://pypi.org/project/dj-database-url/)
@@ -126,20 +136,41 @@ To clone the original repository:
 - [Gunicorn](https://gunicorn.org/)
     - A production-grade WSGI server
 - [Django All Auth](https://django-allauth.readthedocs.io/en/latest/)
-### install packages
-pip install <package_name>
-### uninstall packages
-pip uninstall <package_name>
-### update requirements.txt file
+#### install packages
+- pip install django
+- pip install django-allauth
+- pip3 install 'django<4' gunicorn
+- pip3 install dj_database_url==0.5.0 psycopg2
+#### uninstall packages
+pip uninstall 
+#### update requirements.txt file
 pip freeze --local > requirements.txt
 
 
 ## Credits
+
 ### References
 - [Agile User Story Template Spread Sheet, resource provided by Rebecca Tracey-Timoney](https://docs.google.com/spreadsheets/d/1E87iXrwStqmuy0DatpK8e-pD3ygBqotS91npelTbVVs/edit?usp=sharing)
 - [Test-Driven Development with Django, Django REST Framework and Docker](https://testdriven.io/courses/tdd-django)
-### Media
+- [Pagination](https://testdriven.io/blog/django-pagination/)
 
+### Media
+- [Image of baby being held](https://unsplash.com/photos/grayscale-photo-of-woman-hugging-baby-dZYI4ga2eUA)
+- [Woman holding pregnant sign](https://www.pexels.com/photo/a-woman-holding-a-sign-that-says-pregnant-6463131/)
+- [Pregnant women doing yoga](https://www.pexels.com/photocheerful-group-of-pregnant-women-practicing-yoga-in-modern-studio-3984367/)
+
+### Frameworks and Libraries used
+- Figma for project scope 
+- Lucid for logic chart and ERD diagram
+- Heroku for deployment
+- ElephantSQL
+- Google Fonts: To import the fonts used throughout the site
+- Unsplash: Stock images
+- Google DevTools: Used throughout the site's creation to test responsiveness and adjust layout
+- Balsamiq: Wireframe software
+- Am I Responsive: To create a visual of the website across different device sizes
+- Pexels For images used in the website
+- Lighthouse To test performance of website
 
 ## Acknowledgements
 - I am grateful for the invaluable guidance and support provided by my mentor, Mitko Bachvarov.
