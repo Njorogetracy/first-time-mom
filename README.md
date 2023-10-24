@@ -170,6 +170,7 @@ pip freeze --local > requirements.txt
 - [Agile User Story Template Spread Sheet, resource provided by Rebecca Tracey-Timoney](https://docs.google.com/spreadsheets/d/1E87iXrwStqmuy0DatpK8e-pD3ygBqotS91npelTbVVs/edit?usp=sharing)
 - [Test-Driven Development with Django, Django REST Framework and Docker](https://testdriven.io/courses/tdd-django)
 - [Pagination](https://testdriven.io/blog/django-pagination/)
+- [fix error 401- site web manifest](https://medium.com/@aurelien.delogu/401-error-on-a-webmanifest-file-cb9e3678b9f3)
 
 ### Media
 - [Image of baby being held](https://unsplash.com/photos/grayscale-photo-of-woman-hugging-baby-dZYI4ga2eUA)
