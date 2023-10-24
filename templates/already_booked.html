@@ -13,6 +13,9 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+      </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
@@ -22,8 +25,11 @@
 
 <div class="container centered-container">
     <h1 class="activity-title">Already Booked</h1>
-    <h1>You have already booked this activity</h1>
-    <p>You can only book an activity once.</p>
-    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+    <h2 class="mb-4">You have already booked this activity</h2>
+    <p class="mb-4">You can only book an activity once.</p>
+    <div class="text-center">
+        <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+    </div>
 </div>
+
 {% endblock %}

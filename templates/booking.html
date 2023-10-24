@@ -13,6 +13,9 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
@@ -20,26 +23,21 @@
 
 {% block content %}
 
-<div class="container centered-container">
-    <div class="booking">
-        <h2>Booking: {{ activity.name }}</h2>
-        <p>{{ activity.description }}</p>
-        <form method="POST">
-            {% csrf_token %}
-
-            {{ form.as_p }}
-
-            <button class="btn btn-primary" type="submit">Confirm Booking</button>
-        </form>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+            <div class="booking">
+                <h2>Booking: {{ activity.name }}</h2>
+                <p>{{ activity.description }}</p>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-primary" type="submit">Confirm Booking</button>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
-
-
-<!-- <p>
-    
-    Sorry, this activity is fully booked. Please check other <a href="{% url 'activity_list' %}">activities.</a>
-
-</p> -->
 
 
 {% endblock %}

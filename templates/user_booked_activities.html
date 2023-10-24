@@ -13,6 +13,9 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
@@ -20,21 +23,28 @@
 
 {% block content %}
 
-<div class="container centered-container">
-    <h1 class="activity-title">Your Bookings</h1>
-    <p class="activity-thank-you">Thank you, {{ user.email }}, for booking the following activities:</p>
-    <ul id="user-activities-list" class="activity-user-list">
-        {% for booking in bookings %}
-        <li>
-            <strong>Activity</strong> {{ booking.activity.name }}<br>
-            <strong>Date</strong> {{ booking.activity.date }}<br>
-            <strong>Location</strong> {{ booking.activity.location }}<br>
-        </li>
-        <a href="{% url 'cancel-booking' booking.id %}" class="btn btn-danger">Cancel</a>
-        {% empty %}
-        <li>No bookings found.</li>
-        {% endfor %}
-    </ul>
-    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <h1 class="activity-title text-center">Your Bookings</h1>
+            <p class="activity-thank-you text-center">Thank you, {{ user.email }}, for booking the following activities:
+            </p>
+            <ul id="user-activities-list" class="activity-user-list">
+                {% for booking in bookings %}
+                <li>
+                    <strong>Activity</strong> {{ booking.activity.name }}<br>
+                    <strong>Date</strong> {{ booking.activity.date }}<br>
+                    <strong>Location</strong> {{ booking.activity.location }}<br>
+                </li>
+                <a href="{% url 'cancel-booking' booking.id %}" class="btn btn-danger">Cancel</a>
+                {% empty %}
+                <li>No bookings found.</li>
+                {% endfor %}
+            </ul>
+            <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+        </div>
+    </div>
 </div>
+
+
 {% endblock %}

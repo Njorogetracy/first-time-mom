@@ -13,6 +13,9 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
@@ -21,9 +24,18 @@
 {% block content %}
 
 <div class="container centered-container">
-    <h1 class="activity-title">Fully Booked</h1>
-    <h1>This activity is fully booked</h1>
-    <p>Sorry, all available slots for this activity have been filled.</p>
-    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-12">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="activity-title">Fully Booked</h1>
+                    <h1>This activity is fully booked</h1>
+                    <p>Sorry, all available slots for this activity have been filled.</p>
+                    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 {% endblock %}

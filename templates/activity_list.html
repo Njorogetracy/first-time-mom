@@ -15,6 +15,9 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
@@ -22,34 +25,38 @@
 
 {% block content %}
 <div class="container">
-    <h1>Activities</h1>
+    <h1 class="text-center">Activities</h1>
+        <div class="row">
+            {% for activity in page_obj %}
+            <div class="col-md-6 col-lg-4">
+                <div class="activity">
+                    <div class="activity-content">
+                        <h2>{{ activity.name }}</h2>
+                        <p>{{ activity.description }}</p>
+                        <p>Date: {{ activity.date }}</p>
+                        <p>Location: {{ activity.location }}</p>
+                        <p>Type: {{ activity.type }}</p>
+                        <p>Available Slots: {{ activity.current_num_of_participants }}/{{ activity.max_participants }}
+                        </p>
+                        <p class="star">
+                            Rating: {% rating_stars activity.avg_rating %}
+                        </p>
+                        <p>Comment: {{ activity.reviews.first.comment }}</p>
+                        <a class="btn btn-primary" href="{% url 'book_activity' activity.id %}">Book</a>
+                        <a class="btn btn-success" href="{% url 'create_review' activity_id=activity.id %}">Leave a
+                            Review</a>
+                        {% if activity.reviews.count > 1 %}
+                        <a class="btn btn-info" href="{% url 'all_reviews' activity.id %}">View all reviews</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
 
-    <!-- Loop through activities -->
-    {% for activity in page_obj %}
-    <div class="activity">
-        <h2>{{ activity.name }}</h2>
-        <p>{{ activity.description }}</p>
-        <p>Date: {{ activity.date }}</p>
-        <p>Location: {{ activity.location }}</p>
-        <p>Type: {{ activity.type }}</p>
-        <p>Available Slots: {{ activity.current_num_of_participants }}/{{ activity.max_participants }}</p>
-        <p class="star" >
-            Rating: {% rating_stars activity.avg_rating %}
-        </p>
-        <p>Comment: {{ activity.reviews.first.comment }}</p>
-        <a class="btn btn-primary" href="{% url 'book_activity' activity.id %}">Book</a>
-        <a class="btn btn-success" href="{% url 'create_review' activity_id=activity.id %}">Leave a Review</a>
-        {% if activity.reviews.count > 1 %}
-        <a class="btn btn-info" href="{% url 'all_reviews' activity.id %}">View all reviews</a>
-        {% endif %}
-    </div>
-    {% endfor %}
-
-    <!--pagination-->
-    <!-- {% if is_paginated %} -->
+    <!-- Pagination -->
     <nav aria-label="Page navigation">
-
-        <ul class="pagination">
+        <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
             <li class="page-item">
                 <a href="?page={{ page_obj.previous_page_number }}" class="page-link" aria-label="Previous">&laquo;
@@ -63,6 +70,6 @@
             {% endif %}
         </ul>
     </nav>
-    <!-- {% endif %} -->
 </div>
+
 {% endblock %}

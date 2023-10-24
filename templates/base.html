@@ -7,7 +7,7 @@
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="First time mom, Your birth partner">
     <meta name="keywords" content="First time mom, pregnancy, birth, prenatal, antenatal, yoga, knowledge, counselling">
 
@@ -25,12 +25,12 @@
 </head>
 
 <body>
-    <header>
-        <!-- Navigation -->
-        {% block nav %}
-        <nav class="menu">
-            <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="{% url 'index' %}">FTM</a>
+    <div class="container-fluid">
+        <header>
+            <!-- Navigation -->
+            {% block nav %}
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="{% url 'index' %}"><i class="fa-solid fa-house"></i></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -42,49 +42,43 @@
                 </div>
             </nav>
             {% endblock %}
+        </header>
 
-            {% block additional_nav %}
+        <main class="main-container">
+            {% block content %}
 
             {% endblock %}
-        </nav>
-    </header>
 
-    <main class="main-container">
-        {% block content %}
+        </main>
 
-        {% endblock %}
-
-    </main>
-
-    <!-- footer -->
-    <footer class="footer mt-auto py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <!-- Contact Info -->
-                    <h5>Contact Information</h5>
-                    <p>Email: ftm@gmail.com</p>
-                    <p>Phone: (31) 456-78</p>
-                    <p>Address: 123 Main Street, City, Country</p>
-                </div>
-                <div class="col-md-4">
-                    <!-- Location -->
-                    <h5>Location</h5>
-                    <p>Utrecht, Haven 6</p>
-                    <p><a href="https://maps.google.com?q=Your+Location" target="_blank">View on Google Maps</a></p>
-                </div>
-                <div class="col-md-4">
-                    <!-- Social Links -->
-                    <h5>Explore Our Socials</h5>
-                    <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+        <!-- footer -->
+        <footer class="footer mt-auto py-3">
+            <div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <!-- Contact Info -->
+                        <h5>Contact Information</h5>
+                        <p>Email: ftm@gmail.com</p>
+                        <p>Phone: (31) 456-78</p>
+                        <p>Address: Haven 6, Utrecht, Netherlands</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <!-- Location -->
+                        <h5>Location</h5>
+                        <p>Utrecht, Haven 6</p>
+                        <p><a href="https://maps.google.com?q=Your+Location" target="_blank">View on Google Maps</a></p>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <!-- Social Links -->
+                        <h5>Explore Our Socials</h5>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-
-
+        </footer>
+    </div>
 
     <!-- bootstrap js files -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"

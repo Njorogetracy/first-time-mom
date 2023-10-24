@@ -3,38 +3,54 @@
 {% block nav-list %}
 
 <ul class="navbar-nav">
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'hub' %}">Hub</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-    </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'hub' %}">Hub</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'about' %}">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+  </li>
 </ul>
 {% endblock %}
 
 {% block content %}
+
 <div class="container">
-  <h1>Reviews for {{ activity.name }}</h1>
+  <div class="row justify-content-center">
+    <div class="col-lg-8 col-md-10 col-12">
+      <h1>Reviews for {{ activity.name }}</h1>
 
-  <ul>
-    {% for review in reviews %}
-      <li>
-        <p>Activity: {{ review.activity }}</p>
-        <p>Rating: {{ review.rating }}</p>
-        <p>Comment: {{ review.comment }}</p>
-        <p>Posted by: {{ review.user }}</p>
-      </li>
-    {% empty %}
-      <li>No reviews available.</li>
-    {% endfor %}
-  </ul>
+      <div class="row">
+        {% for review in reviews %}
+        <div class="col-lg-4 col-md-4 col-12">
+          <div class="card mb-4">
+            <div class="card-header">Review</div>
+            <div class="card-body">
+              <p><strong>Activity:</strong> {{ review.activity }}</p>
+              <p><strong>Rating:</strong> {{ review.rating }}</p>
+              <p><strong>Comment:</strong> {{ review.comment }}</p>
+              <p><strong>Posted by:</strong> {{ review.user }}</p>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+          <p>No reviews available.</p>
+        </div>
+        {% endfor %}
+      </div>
 
-  <a href="{% url 'activity_list' %}">Back to Activities</a>
+      <a class="btn btn-primary" href="{% url 'activity_list' %}">Back to Activities</a>
+    </div>
+  </div>
 </div>
+
 {% endblock %}

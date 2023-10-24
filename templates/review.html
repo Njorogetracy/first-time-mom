@@ -13,26 +13,36 @@
         <a class="nav-link" href="{% url 'user_booked_activities' %}">My Activities</a>
     </li>
     <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+    <li class="nav-item">
         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
     </li>
 </ul>
 {% endblock %}
 
 {% block content %}
+
 <div class="container">
-    {% if submitted %}
-    <div class="thank-you-message">
-        <p>Thank you for your review!</p>
-        <p>You can now return to the activities list.</p>
-        <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10 col-12">
+            {% if submitted %}
+            <div class="thank-you-message">
+                <p>Thank you for your review!</p>
+                <p>You can now return to the activities list.</p>
+                <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+            </div>
+            {% else %}
+            <h2>Leave Review</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Submit Review</button>
+            </form>
+            {% endif %}
+        </div>
     </div>
-    {% else %}
-    <h2>Leave Review</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary" type="submit">Submit Review</button>
-    </form>
-    {% endif %} 
 </div>
+
+
 {% endblock %}

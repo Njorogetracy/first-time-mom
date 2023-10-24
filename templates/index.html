@@ -8,6 +8,21 @@
     <li class="nav-item">
         <a class="nav-link" href="{% url 'about' %}">About</a>
     </li>
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'activity_list' %}">Activities</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+    </li>
+    {% endif %}
 </ul>
 
 {% endblock %}
@@ -26,12 +41,12 @@
                     <p>Welcome Mama! Please sign up</p>
                     <a href="{% url 'account_signup' %}" class="btn btn-success">Sign Up</a>
                     <p>Welcome Mama! Please log in</p>
-                    <a href="{% url 'account_login' %}" class="btn btn-primary">Log In</a>
+                    <a href="{% url 'account_login' %}" class="btn btn-success">Log In</a>
                     {% endif %}
                 </div>
             </div>
         </div>
-        <div class="col-lg-6">
+        <div class="col-md-6">
             <img src="../static/assets/images/isaac-quesada.jpg" alt="Baby being held" class="img-fluid">
         </div>
     </div>
