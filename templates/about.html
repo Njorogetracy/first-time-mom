@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block nav-list %}
+<ul class="navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'about' %}">About</a>
+    </li>
+</ul>
+
+{% endblock %}
+
+{% block content %}
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2>About Us</h2>
+                <p>Welcome to First Time Mom, your safe haven for navigating the beautiful journey of pregnancy. We
+                    understand that becoming a mother for the first time is both exciting and challenging. That's why
+                    we're here to provide you with the support, knowledge, and community you need to make this
+                    experience as smooth and fulfilling as possible.</p>
+                <p>At First Time Mom, we offer a range of activities designed to empower and support new mothers. From
+                    yoga classes to group counseling sessions and educational classes, our platform is a one-stop
+                    destination for all your pregnancy needs. You can learn from experts, share experiences with fellow
+                    moms, and build a network of friends who are walking the same journey as you.</p>
+                <p>Join us today to embark on this wonderful adventure of motherhood, and let's navigate it together
+                    with care, support, and expertise.</p>
+            </div>
+            <div class="col-lg-6">
+                <img src="your-image-url.jpg" alt="Pregnant women practicing yoga">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

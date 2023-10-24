@@ -16,6 +16,10 @@ class HubView(TemplateView):
     template_name = 'home.html'
 
 
+class AboutUsView(TemplateView):
+    template_name = 'about.html'
+
+
 class ActivityListView(ListView):
     model = Activity
     template_name = 'activity_list.html'
