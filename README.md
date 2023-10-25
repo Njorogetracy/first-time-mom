@@ -1,6 +1,6 @@
 # Introduction 
 
-**first time mom** is an innovative and user friendly application, that offers support, through activities, to new moms trying to navigate their pregnancy journey as they prepare to welcome their little ones. This web-based application allows users to book and/or cancel different activities. Check out the application **here**
+**First time mom** is an innovative and user friendly application, that offers support, through activities, to new moms trying to navigate their pregnancy journey as they prepare to welcome their little ones. This web-based application allows users to book and/or cancel different activities. Check out the application [here](first-time-mom-67725208182a.herokuapp.com)
 
 
 # Table of Contents
@@ -114,6 +114,34 @@
 | 21 | signout btn | logs out signed in users | logs out signed in users | none |
 | 22 | View on google maps link | directs users to google maps | directs users to google maps | none |
 | 23 | Social media links | directs users to social media pages | directs users to social media pages | none |
+
+
+## HTML W3CValidator
+- ![home](static/assets/images/readme/home-test.png)
+- ![about](static/assets/images/readme/about-test.png)
+- ![activity](static/assets/images/readme/activity-test.png)
+- ![my-activity](static/assets/images/readme/my-activity-test.png)
+- ![logout](static/assets/images/readme/logout-test.png)
+- ![review](static/assets/images/readme/review-test.png)
+- ![see review](static/assets/images/readme/see-review-test.png)
+- ![booking](static/assets/images/readme/booking-test.png)
+- ![confirm-booking]()
+- ![signup]()
+- ![signin]()
+- ![cancel]()
+
+## CSS Validation
+- ![css test](static/assets/images/readme/css-test.png)
+
+## PythonTesting
+- ![models](static/assets/images/readme/model-test.png)
+- ![views](static/assets/images/readme/view-test.png)
+- ![admin](static/assets/images/readme/admin-test.png)
+- ![forms](static/assets/images/readme/forms-test.png)
+- ![settings](static/assets/images/readme/settings-test.png)
+- ![url](static/assets/images/readme/url-test.png)
+- ![urls](static/assets/images/readme/urls-test.png)
+- ![rating](static/assets/images/readme/rating-test.png)
 
 # Deoployment and Version control 
 

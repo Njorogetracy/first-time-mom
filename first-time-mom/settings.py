@@ -33,7 +33,6 @@ ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com', 'localhost', '8080
 
 # ALLOWED_HOSTS = ['8000-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']  # noqa
 
-
 # Application definition
 
 AUTHENTICATION_BACKENDS = [

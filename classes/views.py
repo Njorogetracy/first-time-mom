@@ -51,7 +51,7 @@ class BookingView(FormView):
                                                   activity=activity,
                                                   is_confirmed=True).first()
         if existing_booking:
-            return render(self.request, 
+            return render(self.request,
                           'already_booked.html', {'activity': activity})
 
         booking = form.save(commit=False)
@@ -157,7 +157,7 @@ class ReviewCreateView(CreateView):
         form.instance.approved = True
         form.instance.activity = Activity.objects.get(
                                                       pk=self.kwargs[
-                                                       'activity_id']) 
+                                                       'activity_id'])
         self.submitted = True
         return super().form_valid(form)
 
