@@ -31,7 +31,14 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'ALLOW-FROM https://cloudinary.com'
 
-ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com', 'localhost', '8080-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']  # noqa
+ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com',
+                 'localhost',
+                 '8080-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']
+
+if 'CLIENT_ORIGIN' in os.environ:
+    CORS_ALLOWED_ORIGINS = [
+        os.environ.get('CLIENT_ORIGIN')
+    ]
 
 # ALLOWED_HOSTS = ['8000-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']  # noqa
 
