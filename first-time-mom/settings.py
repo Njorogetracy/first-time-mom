@@ -29,7 +29,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')  # noqa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com', 'localhost', '8080-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']  # noqa
 
