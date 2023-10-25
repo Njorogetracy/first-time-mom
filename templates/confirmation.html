@@ -24,15 +24,21 @@
 {% block content %}
 
 <div class="container centered-container">
-    <h1 class="activity-title">Booking Confirmed!</h1>
-    <div class="activity text-center">
-        <p class="activity-thank-you">Thank you, {{ user.email }}, your booking for {{ activity.name }} is confirmed!</p>
-        <p>Enjoy your experience!</p>
-        <div class="btn-group d-flex justify-content-center" role="group">
-            <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
-            <a class="btn btn-success" href="{% url 'user_booked_activities' %}">My Activities</a>
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title activity-title">Booking Confirmed!</h1>
+            <div class="activity text-center">
+                <p class="activity-thank-you">Thank you, {{ user.email }}, your booking for {{ activity.name }} is
+                    confirmed!</p>
+                <p>Enjoy your experience!</p>
+                <div class="btn-group d-flex justify-content-center" role="group">
+                    <a class="btn btn-primary" href="{% url 'activity_list' %}">Return to Activities</a>
+                    <a class="btn btn-success" href="{% url 'user_booked_activities' %}">My Activities</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+>
 
 {% endblock %}

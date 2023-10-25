@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400&family=Source+Serif+Pro&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    border: none;
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 /* Global styles */
 body {
     font-family: Oswald, sans-serif;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    padding-bottom: 10rem;
     color: #224c28;
+    min-height: 100%;
+    position: relative;
+    box-sizing: inherit;
 }
 
 /* Header and navigation styles */
@@ -38,14 +40,14 @@ header {
 }
 
 .menu a {
-    color: #e84c3e;
+    color: #224c28;
     text-decoration: none;
     margin: 0 20px;
     font-size: 16px;
 }
 
 .menu .navbar-brand {
-    color: #e84c3e;
+    color: #224c28;
 }
 
 /* Hamburger menu icon styles */
@@ -59,8 +61,10 @@ header {
     background-color: rgba(34, 76, 40, 0.2);
     color: #fdffff;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
 }
 
 .footer a {
@@ -70,7 +74,7 @@ header {
 }
 
 .footer p {
-    color: #e84c3e;
+    color: #224c28;
     font-weight: bold;
     font-size: 100%;
     margin: 5px 0;
@@ -90,7 +94,7 @@ header {
 
 
 /* Home.html, User profile styles */
-.user-profile{
+.user-profile {
     text-align: center;
 }
 
@@ -117,7 +121,7 @@ header {
 }
 
 .custom-btn {
-    background-color: #e84c3e;  
+    background-color: #e84c3e;
     color: #224c28;
     font-size: 100%;
 }
@@ -157,7 +161,7 @@ header {
 
 .activity h2 {
     font-size: 24px;
-    color: #224c28; 
+    color: #224c28;
 }
 
 .activity p {
@@ -182,9 +186,9 @@ header {
 }
 
 .pagination .page-link {
-    background-color: #e84c3e; 
+    background-color: #e84c3e;
     color: #224c28;
-    border: 1px solid #e84c3e; 
+    border: 1px solid #e84c3e;
 }
 
 /* Style the buttons */
@@ -193,13 +197,13 @@ header {
 }
 
 .btn-primary {
-    background-color: #e84c3e; 
-    border: 1px solid #e84c3e; 
+    background-color: #e84c3e;
+    border: 1px solid #e84c3e;
     color: #224c28;
 }
 
 .btn-primary:hover {
-    background-color: #c73926; 
+    background-color: #c73926;
     border: 1px solid #c73926;
 }
 
