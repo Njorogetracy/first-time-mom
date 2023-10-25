@@ -125,10 +125,6 @@
 - ![review](static/assets/images/readme/review-test.png)
 - ![see review](static/assets/images/readme/see-review-test.png)
 - ![booking](static/assets/images/readme/booking-test.png)
-- ![confirm-booking]()
-- ![signup]()
-- ![signin]()
-- ![cancel]()
 
 ## CSS Validation
 - ![css test](static/assets/images/readme/css-test.png)
@@ -142,6 +138,48 @@
 - ![url](static/assets/images/readme/url-test.png)
 - ![urls](static/assets/images/readme/urls-test.png)
 - ![rating](static/assets/images/readme/rating-test.png)
+
+## Lighthouse
+### Desktop
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+
+### mobile
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+- ![]()
+
+## Bugs
+- The following bugs were found while working on the project:
+Access to manifest has been blocked by Cors policy, however i was unable to resolve it even after going through the documentation. Find error image ![]()
+- Signup page does not display users first and last name fields due to allauth overriding my account-signup 
+- Footer blocked content in smaller devices, fixed by adding media queries for smaller screen sizes
+
+
+## Future Features
+- Allow admin rights to instructors so they can add classes
+- Retrive first name and display it when user is signed in
+- Allow users to reset passwords
+- Allow users to login with social accounts
 
 # Deoployment and Version control 
 

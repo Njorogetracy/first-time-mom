@@ -277,3 +277,22 @@ header {
 .activity-user-list li br {
     display: none;
 }
+
+/* media queries for smaller screen sizes */
+
+@media screen and (max-width: 900px) {
+    .main-container {
+        position: relative;
+        min-height: 100vh;
+        margin: 0;
+        padding-bottom: 10rem;
+        box-sizing: border-box;
+    }
+    .footer {
+        text-align: center;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
