@@ -16,7 +16,7 @@
 4. - [Wireframes](#wireframes)
 5. - [Features](#features)
 6. - [Testing](#testing)
-    - [Function Testing](#function-testing)
+    - [ManualTesting](#function-testing)
     - [Performance](#perfomance)
     - [Validation](#validation)
     - [HTML](#HTML)
@@ -86,6 +86,34 @@
 
 ### ERD Design
 - Find the entity relation diagram ![here](static/assets/images/readme/FTM-ERD.jpeg)
+
+# Testing 
+## Manual Testing
+| \#  | FEATURE | EXPECTED | TESTING | RESULT | FIX |
+| --- | --------- | ----- | ---------------- | ----------------- |
+| 1 | Home Icon | redirect user to landing page | directs user to lading page | none |
+| 2 | Signup btn | direct new user to signup page | directs user to sign-up | none |
+| 3 | Confirm signup | register new user | register new user| none |
+| 4 | Signin | directs returning user to login | directs user to login | none | 
+| 5 | Confirm signin | logs in user and directs to homepage | directs user to homepage after login | none |
+| 6 | View activities btn | directs user to list of activites | directs user to activities page | none |
+| 7 | Book btn | directs user to book activity | redirects user to confirmation booking page | none |
+| 8 | Confirm booking btn | directs user to confirm booking | redirects user to confirmed booking page | none |
+| 9 | Return to activities btn | redirects users back to activities page | redirects users to activities page | none |
+| 10 | My activities btn | directs users to view their booked activities | redirects users to their confirmed bookings | none |
+| 11 | Cancel booking btn | allows users to cancel booking | directs user to confirm cancellation | none |
+| 12 | Confirm cancellation btn | cancellation validation | directs users to confirm cancellation or refute cancellation | none |
+| 13 | Leave review btn | allows user to leave rating and comment | directs user to review page, to write reviews | none | 
+| 14 | Submit review btn | allows users to submit reviews | submit user reviews and redirects to activities | none |
+| 15 | View all reviews btn | direct users to view all reviews page | directs users to view all reviews page | none |
+| 16 | Next btn | direct users to view more activities | directs users to next page with more activities | none |
+| 17 | Previous btn | directs users back to previous activites page | directs users back to previous page | none |
+| 18 | Hub navigation | directs users to home page | directs users to home page | none 
+| 19 | About navigation | directs users to about page | directs users to about page | none |
+| 20 | Logout navigation | directs users to confirm logout | directs users to confirm logout | none |
+| 21 | signout btn | logs out signed in users | logs out signed in users | none |
+| 22 | View on google maps link | directs users to google maps | directs users to google maps | none |
+| 23 | Social media links | directs users to social media pages | directs users to social media pages | none |
 
 # Deoployment and Version control 
 
