@@ -139,38 +139,36 @@
 - ![urls](static/assets/images/readme/urls-test.png)
 - ![rating](static/assets/images/readme/rating-test.png)
 
+## Jshint
+![js-test](static/assets/images/readme/js-test.png)
+
 ## Lighthouse
 ### Desktop
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
+- ![about](static/assets/images/readme/l-about.png)
+- ![activities](static/assets/images/readme/l-activities.png)
+- ![booking](static/assets/images/readme/l-booking.png)
+- ![home](static/assets/images/readme/l-home.png)
+- ![landing page](static/assets/images/readme/l-landingpg.png)
+- ![my activites](static/assets/images/readme/l-myactivities.png)
+- ![see reviews](static/assets/images/readme/l-see-review.png)
+- ![signin](static/assets/images/readme/l-signin.png)
+- ![signup](static/assets/images/readme/l-signup.png)
+- ![logout](static/assets/images/readme/l-logout.png)
+- ![review](static/assets/images/readme/l-review.png)
 
 ### mobile
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
-- ![]()
+- ![about](static/assets/images/readme/m-about.png)
+- ![activites](static/assets/images/readme/m-activites.png)
+- ![home](static/assets/images/readme/m-home.png)
+- ![review](static/assets/images/readme/m-review.png)
+- ![booking](static/assets/images/readme/m-booking.png)
+- ![landing page](static/assets/images/readme/m-landing.png)
+- ![see reviews](static/assets/images/readme/m-see-review.png)
+- ![myactivites](static/assets/images/readme/m-myactivities.png)
 
 ## Bugs
 - The following bugs were found while working on the project:
-Access to manifest has been blocked by Cors policy, however i was unable to resolve it even after going through the documentation. Find error image ![]()
+Access to manifest has been blocked by Cors policy, however i was unable to resolve it even after going through the documentation. Find error image ![here](static/assets/images/readme/cors-error.png)
 - Signup page does not display users first and last name fields due to allauth overriding my account-signup 
 - Footer blocked content in smaller devices, fixed by adding media queries for smaller screen sizes
 
@@ -240,6 +238,17 @@ To clone the original repository:
 - Python
 #### Frameworks, Libraries & Additional Programs/Software used
 - Django
+- Figma for project scope 
+- Heroku for deployment
+- ElephantSQL
+- cloudinary
+- Google Fonts: To import the fonts used throughout the site
+- Unsplash: Stock images
+- Google DevTools: Used throughout the site's creation to test responsiveness and adjust layout
+- Balsamiq: Wireframe software
+- Am I Responsive: To create a visual of the website across different device sizes
+- Pexels For images used in the website
+- Lighthouse To test performance of website
 #### Libraries & Dependencies
 - [DJ-Database-URL](https://pypi.org/project/dj-database-url/)
     - Generates the proper database configuration dictionary for the Django settings based on the `DATABASE_URL`
@@ -259,6 +268,7 @@ pip freeze --local > requirements.txt
 
 
 ## Credits
+- Code Institute Gitpod template
 
 ### References
 - [Agile User Story Template Spread Sheet, resource provided by Rebecca Tracey-Timoney](https://docs.google.com/spreadsheets/d/1E87iXrwStqmuy0DatpK8e-pD3ygBqotS91npelTbVVs/edit?usp=sharing)
@@ -270,19 +280,6 @@ pip freeze --local > requirements.txt
 - [Image of baby being held](https://unsplash.com/photos/grayscale-photo-of-woman-hugging-baby-dZYI4ga2eUA)
 - [Woman holding pregnant sign](https://www.pexels.com/photo/a-woman-holding-a-sign-that-says-pregnant-6463131/)
 - [Pregnant women doing yoga](https://www.pexels.com/photocheerful-group-of-pregnant-women-practicing-yoga-in-modern-studio-3984367/)
-
-### Frameworks and Libraries used
-- Figma for project scope 
-- Lucid for logic chart and ERD diagram
-- Heroku for deployment
-- ElephantSQL
-- Google Fonts: To import the fonts used throughout the site
-- Unsplash: Stock images
-- Google DevTools: Used throughout the site's creation to test responsiveness and adjust layout
-- Balsamiq: Wireframe software
-- Am I Responsive: To create a visual of the website across different device sizes
-- Pexels For images used in the website
-- Lighthouse To test performance of website
 
 ## Acknowledgements
 - I am grateful for the invaluable guidance and support provided by my mentor, Mitko Bachvarov.
