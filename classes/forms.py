@@ -1,7 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import CustomUser, Review, Booking
-
+from django.core.exceptions import ValidationError
+from datetime import date
 
 class CustomUserCreationForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True,
@@ -28,12 +29,20 @@ class ReviewForm(forms.ModelForm):
 
 
 class BookingForm(forms.ModelForm):
-    due_date = forms.DateField(required=False,
+    due_date = forms.DateField(required=True, label='date',
                                widget=forms.TextInput(attrs={'type': 'date'}))
-    has_journal = forms.BooleanField(required=False,
+    has_journal = forms.BooleanField(required=True,
                                      label="Do you have a journal?")
-    needs_journal = forms.BooleanField(required=False,
+    needs_journal = forms.BooleanField(required=True,
                                        label="Do you need a journal?")
+
+    def clean_due_date(self):
+        data = self.cleaned_data['due_date']
+        if data < date.today():
+            raise forms.ValidationError('Booking date cannot be in the past')
+        else:
+            print(f"Valid due_date selected: {data}")
+        return data
 
     class Meta:
         model = Booking

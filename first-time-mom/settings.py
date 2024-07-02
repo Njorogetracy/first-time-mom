@@ -27,20 +27,19 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'ALLOW-FROM https://cloudinary.com'
 
 ALLOWED_HOSTS = ['first-time-mom-67725208182a.herokuapp.com',
                  'localhost',
-                 '8080-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']
+                 '8000-njorogetrac-firsttimemo-4np8m6h96mi.ws.codeinstitute-ide.net']
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN')
     ]
 
-# ALLOWED_HOSTS = ['8000-njorogetrac-firsttimemo-9etjbw08zd5.ws-eu105.gitpod.io']  # noqa
 
 # Application definition
 

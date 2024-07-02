@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function () {
     navbarToggler.addEventListener('click', function () {
         navbar.classList.toggle('show');
     });
+
+    var today = new Date().toISOString().split('T')[0];
+    $('input[name="due_date"]').attr('min', today);
 });
 
 
+// prevent booking of past dates
