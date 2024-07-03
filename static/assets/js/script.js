@@ -7,9 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navbar.classList.toggle('show');
     });
 
+    // prevent booking past dates
     var today = new Date().toISOString().split('T')[0];
     $('input[name="due_date"]').attr('min', today);
 });
-
-
-// prevent booking of past dates

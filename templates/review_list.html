@@ -38,6 +38,9 @@
               <p><strong>Rating:</strong> {{ review.rating }}</p>
               <p><strong>Comment:</strong> {{ review.comment }}</p>
               <p><strong>Posted by:</strong> {{ review.user }}</p>
+              {% if review.user == request.user %}
+                <a class="btn btn-primary" href="{% url 'delete_review' review.pk %}"  >Delete Review</a>
+              {% endif %}
             </div>
           </div>
         </div>

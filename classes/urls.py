@@ -20,6 +20,8 @@ urlpatterns = [
          ReviewCreateView.as_view(), name='create_review'),
     path('activity/<int:activity_id>/review/',
          ReviewListView.as_view(), name='activity_review'),
+    path('review/<int:pk>/delete/',
+         ReviewDeleteView.as_view(), name='delete_review'),
     path('activity/<int:activity_id>/all_reviews/',
          AllReviewsListView.as_view(), name='all_reviews'),
     path('about/', AboutUsView.as_view(), name='about'),

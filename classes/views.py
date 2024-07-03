@@ -1,11 +1,12 @@
-from django.views.generic import ListView, TemplateView, FormView, CreateView
+from django.views.generic import ListView, TemplateView, FormView, CreateView, DeleteView
 from django.views.generic.detail import DetailView
 from django.views import View
 from django.db.models import Avg
 from django.shortcuts import redirect, render, get_object_or_404
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from .models import Activity, Booking, Review
 from .forms import BookingForm, ReviewForm
+from django.http import HttpResponseForbidden
 
 
 class IndexView(TemplateView):
@@ -183,3 +184,19 @@ class AllReviewsListView(ListView):
     def get_queryset(self):
         activity_id = self.kwargs['activity_id']
         return Review.objects.filter(activity_id=activity_id, approved=True)
+
+
+class ReviewDeleteView(DeleteView):
+    model = Review
+    template_name = 'delete_review.html'
+    context_object_name = 'review'
+    
+
+    def get_success_url(self):
+        return reverse_lazy('all_reviews', kwargs={'activity_id': self.object.activity.id})
+
+    def get_object(self, queryset=None):
+        review = super().get_object(queryset)
+        if review.user != self.request.user:
+            raise HttpResponseForbidden("you are not allowed to delete this review")
+        return review
