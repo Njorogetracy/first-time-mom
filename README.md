@@ -89,8 +89,8 @@
 
 # Testing 
 ## Manual Testing
-| \#  | FEATURE | EXPECTED | TESTING | RESULT | FIX |
-| --- | --------- | ----- | ---------------- | ----------------- |
+| \#  | FEATURE | EXPECTED BEHAVIOR | RESULT | FIX |
+| ---- | ------| ----- | --------- | ------- |
 | 1 | Home Icon | redirect user to landing page | directs user to lading page | none |
 | 2 | Signup btn | direct new user to signup page | directs user to sign-up | none |
 | 3 | Confirm signup | register new user | register new user| none |
