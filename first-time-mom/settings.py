@@ -99,7 +99,6 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = 'first-time-mom.wsgi.application'
 
 

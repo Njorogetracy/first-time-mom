@@ -171,6 +171,7 @@ Find the wireframes below:
 | 21 | signout btn | logs out signed in users | logs out signed in users | none |
 | 22 | View on google maps link | directs users to google maps | directs users to google maps | none |
 | 23 | Social media links | directs users to social media pages | directs users to social media pages | none |
+| 24 | Delete review | redirects to confirm delete | redirects to confirm delete | none |
 
 
 ## HTML W3CValidator
