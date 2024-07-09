@@ -59,24 +59,81 @@
 ## Design
 - This is the color scheme used for the website: ![Color](static/assets/images/readme/colour.png)
 ## Wireframes
-- Find the wireframes below:
-- ![landing](static/assets/images/readme/landing-pg.png)
-- ![landing2](static/assets/images/readme/landing2.png)
-- ![home](static/assets/images/readme/home.png)
-- ![signup](static/assets/images/readme/sigup.png)
-- ![login](static/assets/images/readme/login.png)
-- ![activites](static/assets/images/readme/activites.png)
-- ![classes](static/assets/images/readme/classes.png)
-- ![yoga](static/assets/images/readme/yoga.png)
-- ![counselling](static/assets/images/readme/counselling.png)
-- ![maps](static/assets/images/readme/maps.png)
+Find the wireframes below:
+
+<details>
+  <summary>landing</summary>
+  <img src="static/assets/images/readme/landing-pg.png" alt="landing">
+</details>
+
+<details>
+  <summary>landing2</summary>
+  <img src="static/assets/images/readme/landing2.png" alt="landing2">
+</details>
+
+<details>
+  <summary>home</summary>
+  <img src="static/assets/images/readme/home.png" alt="home">
+</details>
+
+<details>
+  <summary>signup</summary>
+  <img src="static/assets/images/readme/sigup.png" alt="signup">
+</details>
+
+<details>
+  <summary>login</summary>
+  <img src="static/assets/images/readme/login.png" alt="login">
+</details>
+
+<details>
+  <summary>activites</summary>
+  <img src="static/assets/images/readme/activites.png" alt="activites">
+</details>
+
+<details>
+  <summary>classes</summary>
+  <img src="static/assets/images/readme/classes.png" alt="classes">
+</details>
+
+<details>
+  <summary>yoga</summary>
+  <img src="static/assets/images/readme/yoga.png" alt="yoga">
+</details>
+
+<details>
+  <summary>counselling</summary>
+  <img src="static/assets/images/readme/counselling.png" alt="counselling">
+</details>
+
+<details>
+  <summary>maps</summary>
+  <img src="static/assets/images/readme/maps.png" alt="maps">
+</details>
+
 
 ### Project scope(5-planes)
 - Find the project design thinking process below:
-- ![Target-audience](static/assets/images/readme/strategy-ta.jpg)
-- ![User-needs](static/assets/images/readme/user-needs.jpg)
-- ![Opportunity-matrices](static/assets/images/readme/opportunity-matrices.jpg)
-- ![Scope](static/assets/images/readme/scope.jpg)
+<details>
+  <summary>Target-audience</summary>
+  <img src="static/assets/images/readme/strategy-ta.jpg" alt="Target-audience">
+</details>
+
+<details>
+  <summary>User-needs</summary>
+  <img src="static/assets/images/readme/user-needs.jpg" alt="User-needs">
+</details>
+
+<details>
+  <summary>Opportunity-matrices</summary>
+  <img src="static/assets/images/readme/opportunity-matrices.jpg" alt="Opportunity-matrices">
+</details>
+
+<details>
+  <summary>Scope</summary>
+  <img src="static/assets/images/readme/scope.jpg" alt="Scope">
+</details>
+
 
 ### Github user-stories
 - Find the user stories ![here](static/assets/images/readme/user-stories.png)
@@ -117,54 +174,194 @@
 
 
 ## HTML W3CValidator
-- ![home](static/assets/images/readme/home-test.png)
-- ![about](static/assets/images/readme/about-test.png)
-- ![activity](static/assets/images/readme/activity-test.png)
-- ![my-activity](static/assets/images/readme/my-activity-test.png)
-- ![logout](static/assets/images/readme/logout-test.png)
-- ![review](static/assets/images/readme/review-test.png)
-- ![see review](static/assets/images/readme/see-review-test.png)
-- ![booking](static/assets/images/readme/booking-test.png)
+<details>
+  <summary>home</summary>
+  <img src="static/assets/images/readme/home-test.png" alt="home">
+</details>
+
+<details>
+  <summary>about</summary>
+  <img src="static/assets/images/readme/about-test.png" alt="about">
+</details>
+
+<details>
+  <summary>activity</summary>
+  <img src="static/assets/images/readme/activity-test.png" alt="activity">
+</details>
+
+<details>
+  <summary>my-activity</summary>
+  <img src="static/assets/images/readme/my-activity-test.png" alt="my-activity">
+</details>
+
+<details>
+  <summary>logout</summary>
+  <img src="static/assets/images/readme/logout-test.png" alt="logout">
+</details>
+
+<details>
+  <summary>review</summary>
+  <img src="static/assets/images/readme/review-test.png" alt="review">
+</details>
+
+<details>
+  <summary>see review</summary>
+  <img src="static/assets/images/readme/see-review-test.png" alt="see review">
+</details>
+
+<details>
+  <summary>booking</summary>
+  <img src="static/assets/images/readme/booking-test.png" alt="booking">
+</details>
+
 
 ## CSS Validation
 - ![css test](static/assets/images/readme/css-test.png)
 
 ## PythonTesting
-- ![models](static/assets/images/readme/model-test.png)
-- ![views](static/assets/images/readme/view-test.png)
-- ![admin](static/assets/images/readme/admin-test.png)
-- ![forms](static/assets/images/readme/forms-test.png)
-- ![settings](static/assets/images/readme/settings-test.png)
-- ![url](static/assets/images/readme/url-test.png)
-- ![urls](static/assets/images/readme/urls-test.png)
-- ![rating](static/assets/images/readme/rating-test.png)
+<details>
+  <summary>models</summary>
+  <img src="static/assets/images/readme/model-test.png" alt="models">
+</details>
+
+<details>
+  <summary>views</summary>
+  <img src="static/assets/images/readme/view-test.png" alt="views">
+</details>
+
+<details>
+  <summary>admin</summary>
+  <img src="static/assets/images/readme/admin-test.png" alt="admin">
+</details>
+
+<details>
+  <summary>forms</summary>
+  <img src="static/assets/images/readme/forms-test.png" alt="forms">
+</details>
+
+<details>
+  <summary>settings</summary>
+  <img src="static/assets/images/readme/settings-test.png" alt="settings">
+</details>
+
+<details>
+  <summary>url</summary>
+  <img src="static/assets/images/readme/url-test.png" alt="url">
+</details>
+
+<details>
+  <summary>urls</summary>
+  <img src="static/assets/images/readme/urls-test.png" alt="urls">
+</details>
+
+<details>
+  <summary>rating</summary>
+  <img src="static/assets/images/readme/rating-test.png" alt="rating">
+</details>
+
 
 ## Jshint
 ![js-test](static/assets/images/readme/js-test.png)
 
 ## Lighthouse
 ### Desktop
-- ![about](static/assets/images/readme/l-about.png)
-- ![activities](static/assets/images/readme/l-activities.png)
-- ![booking](static/assets/images/readme/l-booking.png)
-- ![home](static/assets/images/readme/l-home.png)
-- ![landing page](static/assets/images/readme/l-landingpg.png)
-- ![my activites](static/assets/images/readme/l-myactivities.png)
-- ![see reviews](static/assets/images/readme/l-see-review.png)
-- ![signin](static/assets/images/readme/l-signin.png)
-- ![signup](static/assets/images/readme/l-signup.png)
-- ![logout](static/assets/images/readme/l-logout.png)
-- ![review](static/assets/images/readme/l-review.png)
+<details>
+  <summary>about</summary>
+  <img src="static/assets/images/readme/l-about.png" alt="about">
+</details>
+
+<details>
+  <summary>activities</summary>
+  <img src="static/assets/images/readme/l-activities.png" alt="activities">
+</details>
+
+<details>
+  <summary>booking</summary>
+  <img src="static/assets/images/readme/l-booking.png" alt="booking">
+</details>
+
+<details>
+  <summary>home</summary>
+  <img src="static/assets/images/readme/l-home.png" alt="home">
+</details>
+
+<details>
+  <summary>landing page</summary>
+  <img src="static/assets/images/readme/l-landingpg.png" alt="landing page">
+</details>
+
+<details>
+  <summary>my activities</summary>
+  <img src="static/assets/images/readme/l-myactivities.png" alt="my activities">
+</details>
+
+<details>
+  <summary>see reviews</summary>
+  <img src="static/assets/images/readme/l-see-review.png" alt="see reviews">
+</details>
+
+<details>
+  <summary>signin</summary>
+  <img src="static/assets/images/readme/l-signin.png" alt="signin">
+</details>
+
+<details>
+  <summary>signup</summary>
+  <img src="static/assets/images/readme/l-signup.png" alt="signup">
+</details>
+
+<details>
+  <summary>logout</summary>
+  <img src="static/assets/images/readme/l-logout.png" alt="logout">
+</details>
+
+<details>
+  <summary>review</summary>
+  <img src="static/assets/images/readme/l-review.png" alt="review">
+</details>
+
 
 ### mobile
-- ![about](static/assets/images/readme/m-about.png)
-- ![activites](static/assets/images/readme/m-activites.png)
-- ![home](static/assets/images/readme/m-home.png)
-- ![review](static/assets/images/readme/m-review.png)
-- ![booking](static/assets/images/readme/m-booking.png)
-- ![landing page](static/assets/images/readme/m-landing.png)
-- ![see reviews](static/assets/images/readme/m-see-review.png)
-- ![myactivites](static/assets/images/readme/m-myactivities.png)
+<details>
+  <summary>about</summary>
+  <img src="static/assets/images/readme/m-about.png" alt="about">
+</details>
+
+<details>
+  <summary>activites</summary>
+  <img src="static/assets/images/readme/m-activites.png" alt="activites">
+</details>
+
+<details>
+  <summary>home</summary>
+  <img src="static/assets/images/readme/m-home.png" alt="home">
+</details>
+
+<details>
+  <summary>review</summary>
+  <img src="static/assets/images/readme/m-review.png" alt="review">
+</details>
+
+<details>
+  <summary>booking</summary>
+  <img src="static/assets/images/readme/m-booking.png" alt="booking">
+</details>
+
+<details>
+  <summary>landing page</summary>
+  <img src="static/assets/images/readme/m-landing.png" alt="landing page">
+</details>
+
+<details>
+  <summary>see reviews</summary>
+  <img src="static/assets/images/readme/m-see-review.png" alt="see reviews">
+</details>
+
+<details>
+  <summary>myactivites</summary>
+  <img src="static/assets/images/readme/m-myactivities.png" alt="myactivites">
+</details>
+
 
 ## Bugs
 - The following bugs were found while working on the project:
