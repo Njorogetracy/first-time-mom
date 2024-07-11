@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', function () {
     // prevent booking past dates
     var today = new Date().toISOString().split('T')[0];
     $('input[name="due_date"]').attr('min', today);
+
 });
